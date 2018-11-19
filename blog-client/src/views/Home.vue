@@ -46,7 +46,7 @@ export default {
     getAllPosts(){
       axios({
         method: 'get',
-        url: 'http://localhost:3000/posts'
+        url: 'http://35.196.110.1:80/posts'
       })
         .then(response=>{
           this.posts = response.data.posts
