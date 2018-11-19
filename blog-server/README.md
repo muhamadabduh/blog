@@ -97,3 +97,8 @@ Route | HTTP | Description
 * **Error Response:**
   * **Code:** 500 INTERNAL SERVER ERROR 💢<br />
     **Content:** `{ err : error object }`  
+
+    ## ENVIRONMENT
+    SECRET_JWT=yoivroh
+    MLAB_USER=duhabduh
+    MLAB_PASSWORD=muh45len

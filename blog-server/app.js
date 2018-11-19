@@ -3,15 +3,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv').config()
 const mongoose = require('mongoose')
 const cors = require('cors')
-mongoose.connect('mongodb://localhost/blogue');
+// mongoose.connect('mongodb://localhost/blogue');
+const mongoUrl = `mongodb://${process.env.MLAB_USER}:${process.env.MLAB_PASSWORD}@ds149329.mlab.com:49329/blogue`
+mongoose.connect(mongoUrl, {
+  useNewUrlParser: true
+})
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
   console.log("Database Connected");
 });
-require('dotenv').config()
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postsRouter = require('./routes/posts')
