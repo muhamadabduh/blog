@@ -79,7 +79,7 @@ export default {
         getPosts(){
             axios({
                 method: 'get',
-                url: 'http://35.196.110.1:80/posts/user',
+                url: 'http://35.196.110.1/posts/user',
                 headers: {
                     token : this.token
                 }
@@ -110,7 +110,7 @@ export default {
         submitPost(){
             axios({
                 method: 'post',
-                url: 'http://35.196.110.1:80/posts',
+                url: 'http://35.196.110.1/posts',
                 headers: {
                     token : this.token
                 },
@@ -133,7 +133,7 @@ export default {
         deletePost(id){
             axios({
                 method: 'delete',
-                url: `http://35.196.110.1:80/posts/${id}`,
+                url: `http://35.196.110.1/posts/${id}`,
                 headers: {
                     token: this.token
                 }
@@ -151,7 +151,7 @@ export default {
         editPost(){
             axios({
                 method: 'patch',
-                url: `http://35.196.110.1:80/posts/${this.newPost._id}`,
+                url: `http://35.196.110.1/posts/${this.newPost._id}`,
                 data: {
                     title: this.newPost.title,
                     content: this.newPost.content,

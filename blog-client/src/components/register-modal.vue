@@ -64,7 +64,7 @@ export default {
     handleSubmit () {
       axios({
         method: 'post',
-        url: 'http://35.196.110.1:80/register',
+        url: 'http://35.196.110.1/register',
         data: this.user
       })
         .then(response=>{

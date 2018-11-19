@@ -46,7 +46,7 @@ export default {
     getAllPosts(){
       axios({
         method: 'get',
-        url: 'http://35.196.110.1:80/posts'
+        url: 'http://35.196.110.1/posts'
       })
         .then(response=>{
           this.posts = response.data.posts

@@ -77,7 +77,7 @@ export default {
         getPost(){
             axios({
                 method: 'get',
-                url: `http://35.196.110.1:80/posts/${this.$route.params.id}`
+                url: `http://35.196.110.1/posts/${this.$route.params.id}`
             })
                 .then(response=>{
                     console.log(response)
@@ -91,7 +91,7 @@ export default {
             if(localStorage.getItem('token')){
                 axios({
                     method: 'put',
-                    url: `http://35.196.110.1:80/posts/${this.$route.params.id}/comments`,
+                    url: `http://35.196.110.1/posts/${this.$route.params.id}/comments`,
                     headers : {
                         token: this.token
                     },

@@ -50,7 +50,7 @@ export default {
     handleSubmit () {
       axios({
         method: 'post',
-        url: 'http://35.196.110.1:80/login',
+        url: 'http://35.196.110.1/login',
         data: this.user
       })
         .then(response=>{
