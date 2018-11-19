@@ -59,7 +59,7 @@ export default {
           this.$refs.modal.hide()
         })
         .catch(err=>{
-          console.log(err)
+          console.log(err.data)
         })
     },
     validateEmail(email) {
